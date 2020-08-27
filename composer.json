@@ -1,0 +1,29 @@
+{
+  "name": "siteation/magento2-customer-menu",
+  "description": "",
+  "license": "proprietary",
+  "type": "magento2-module",
+  "readme": "README.md",
+  "keywords": [
+    "magento2",
+    "customer menu"
+  ],
+  "authors": [
+    {
+      "name": "Siteation",
+      "email": "info@siteation.nl",
+      "homepage": "https://www.siteation.nl"
+    }
+  ],
+  "require": {
+    "magento/module-customer": "102.0.*"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Siteation\\CustomerMenu\\": ""
+    }
+  }
+}

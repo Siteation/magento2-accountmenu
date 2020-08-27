@@ -1,0 +1,92 @@
+@customer-menu-position-right: -2px;
+@customer-menu-pointer-position-left-right: 10px;
+@customer-menu-icon-font-size: 28px;
+@customer-menu-icon-line-height: 28px;
+
+& when (@media-common = true) {
+    .customer-menu-wrapper {
+        .lib-dropdown(
+            @_toggle-selector: ~".action.showcustomer",
+            @_options-selector: ~".header.links",
+            @_dropdown-toggle-icon-content: @icon-account,
+            @_dropdown-toggle-active-icon-content: @icon-account,
+            @_dropdown-list-min-width: 150px,
+            @_dropdown-list-item-padding: 3px,
+            @_dropdown-list-item-hover: false,
+            @_dropdown-list-position-right: @customer-menu-position-right,
+            @_dropdown-list-pointer-position: right,
+            @_dropdown-list-pointer-position-left-right: @customer-menu-pointer-position-left-right,
+            @_icon-font-position: before,
+            @_icon-font-size: @customer-menu-icon-font-size,
+            @_icon-font-line-height: @customer-menu-icon-line-height,
+            @_icon-font-color: @minicart-icons-color,
+            @_icon-font-color-hover: @minicart-icons-color-hover,
+            @_icon-font-color-active: @minicart-icons-color,
+            @_dropdown-actions-padding: 5px
+        );
+        position: relative;
+        float: right;
+        display: inline-block;
+
+        .action.showcustomer {
+            .lib-button-as-link();
+
+            &,
+            &:active {
+                box-shadow: none;
+            }
+
+            .action-label {
+                &:extend(.abs-visually-hidden all);
+            }
+        }
+
+        .header.links {
+            &:extend(.abs-reset-list all);
+        }
+
+        .customer-menu {
+            li {
+                &:not(:last-child) {
+                    border-bottom: 1px solid @color-gray80;
+                }
+
+                > a,
+                > strong {
+                    display: block;
+                    padding: 8px 12px;
+                    color: inherit;
+                    cursor: pointer;
+                }
+
+                > a {
+                    &:hover {
+                        background-color: fade(black, 10%);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        &:not(.active) {
+            .customer-menu {
+                display: none;
+            }
+        }
+    }
+}
+
+/* prettier-ignore */
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .customer-menu-wrapper {
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+}
+
+/* prettier-ignore */
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .customer-menu-wrapper {
+        margin-left: 13px;
+    }
+}
