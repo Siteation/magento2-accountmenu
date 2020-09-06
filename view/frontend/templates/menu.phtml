@@ -4,16 +4,16 @@
  * @var Magento\Customer\Block\Account\Customer $block
  */
 ?>
-<div class="customer-menu-wrapper">
+<div class="account-menu-wrapper">
     <div
         class="actions dropdown options"
         role="link"
         tabindex="0"
         data-mage-init='{"dropdown":{}}'
-        data-toggle="customer-menu"
+        data-toggle="account-menu"
         data-trigger-keypress-button="true"
         data-bind="scope: 'customer'">
-        <button type="button" class="action showcustomer" tabindex="-1" data-action="customer-menu-toggle">
+        <button type="button" class="action show-account-menu" tabindex="-1" data-action="account-menu-toggle">
             <?php if ($block->customerLoggedIn()) : ?>
                 <span class="action-label"><?= $block->escapeHtml(__('Account')); ?></span>
             <?php else : ?>
@@ -21,7 +21,7 @@
             <?php endif; ?>
         </button>
     </div>
-    <div class="dropdown customer-menu" data-target="dropdown" role="dialog">
+    <div class="dropdown account-menu" data-target="dropdown" role="dialog">
         <?php if ($block->customerLoggedIn()) : ?>
             <?= $block->getChildHtml('account-menu'); ?>
         <?php else : ?>

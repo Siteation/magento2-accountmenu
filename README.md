@@ -30,7 +30,11 @@ bin/magento setup:upgrade
 ## How to use
 
 Not instructions needed.
-This module works out of the box.
+This module works out of the box for themes based on Luma theme.
+
+If you use the Blank theme instead.
+Make sure add `@account-menu-theme: "blank";` to your own theme.
+To load the Blank theme styles instead of Luma.
 
 ### SCSS support
 

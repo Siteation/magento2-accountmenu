@@ -1,11 +1,13 @@
-$account-menu-position-right: -2px;
-$account-menu-icon-font-size: 28px;
-$account-menu-icon-line-height: 28px;
+$account-menu-toggle-selector: ".action.show-account-menu";
+$account-menu-option-selector: ".header.links";
+$account-menu-position-right: 0;
+$account-menu-icon-font-size: 33px;
+$account-menu-icon-line-height: 33px;
 
-.customer-menu-wrapper {
+.account-menu-wrapper {
     @include lib-dropdown(
-        $_toggle-selector: ".action.showcustomer",
-        $_options-selector: ".header.links",
+        $_toggle-selector: $account-menu-toggle-selector,
+        $_options-selector: $account-menu-option-selector,
         $_dropdown-toggle-icon-content: $icon-account,
         $_dropdown-toggle-active-icon-content: $icon-account,
         $_dropdown-list-min-width: 150px,
@@ -26,7 +28,7 @@ $account-menu-icon-line-height: 28px;
     float: right;
     display: inline-block;
 
-    .action.showcustomer {
+    #{$account-menu-toggle-selector} {
         @include lib-button-as-link();
 
         &,
@@ -43,7 +45,7 @@ $account-menu-icon-line-height: 28px;
         @extend .abs-reset-list;
     }
 
-    .customer-menu {
+    .account-menu {
         li {
             &:not(:last-child) {
                 border-bottom: 1px solid $color-gray80;
@@ -67,21 +69,21 @@ $account-menu-icon-line-height: 28px;
     }
 
     &:not(.active) {
-        .customer-menu {
+        .account-menu {
             display: none;
         }
     }
 }
 
 @include max-screen($screen__m) {
-    .customer-menu-wrapper {
+    .account-menu-wrapper {
         margin-top: 10px;
         margin-right: 10px;
     }
 }
 
 @include min-screen($screen__m) {
-    .customer-menu-wrapper {
+    .account-menu-wrapper {
         margin-left: 13px;
     }
 }
