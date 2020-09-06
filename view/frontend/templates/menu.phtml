@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @var Magento\Customer\Block\Account\Customer $block
+ */
+?>
+<div class="customer-menu-wrapper">
+    <div
+        class="actions dropdown options"
+        role="link"
+        tabindex="0"
+        data-mage-init='{"dropdown":{}}'
+        data-toggle="customer-menu"
+        data-trigger-keypress-button="true"
+        data-bind="scope: 'customer'">
+        <button type="button" class="action showcustomer" tabindex="-1" data-action="customer-menu-toggle">
+            <?php if ($block->customerLoggedIn()) : ?>
+                <span class="action-label"><?= $block->escapeHtml(__('Account')); ?></span>
+            <?php else : ?>
+                <span class="action-label"><?= $block->escapeHtml(__('Login')); ?></span>
+            <?php endif; ?>
+        </button>
+    </div>
+    <div class="dropdown customer-menu" data-target="dropdown" role="dialog">
+        <?php if ($block->customerLoggedIn()) : ?>
+            <?= $block->getChildHtml('account-menu'); ?>
+        <?php else : ?>
+            <?= $block->getChildHtml('account-menu-login'); ?>
+        <?php endif; ?>
+    </div>
+</div>
+
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "customer": {
+                    "component": "Magento_Customer/js/view/customer"
+                }
+            }
+        }
+    }
+}
+</script>

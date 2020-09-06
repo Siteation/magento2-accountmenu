@@ -6,37 +6,49 @@
         <referenceContainer name="header-wrapper">
             <block
                 class="Magento\Customer\Block\Account\Customer"
-                name="customer.menu"
-                template="Siteation_CustomerMenu::customer-menu.phtml"
+                name="account.menu"
+                template="Siteation_AccountMenu::menu.phtml"
                 after="minicart">
-                <block class="Magento\Customer\Block\Account\Navigation" name="customer.menu.links">
+                <!-- Login & Signup menu -->
+                <block class="Magento\Customer\Block\Account\Navigation" name="account.menu.links.login" as="account-menu-login">
                     <arguments>
                         <argument name="css_class" xsi:type="string">header links</argument>
                     </arguments>
-                    <block class="Magento\Customer\Block\Account\Link" name="customer.menu.my-account-link">
+                    <block class="Magento\Customer\Block\Account\RegisterLink" name="account.menu.register-link.login">
+                        <arguments>
+                            <argument name="label" xsi:type="string" translate="true">Create an Account</argument>
+                        </arguments>
+                    </block>
+                    <block
+                        class="Magento\Customer\Block\Account\AuthorizationLink"
+                        name="account.menu.authorization.link.login"
+                        template="Magento_Customer::account/link/authorization.phtml"
+                    />
+                </block>
+                <!-- Account menu -->
+                <block class="Magento\Customer\Block\Account\Navigation" name="account.menu.links" as="account-menu">
+                    <arguments>
+                        <argument name="css_class" xsi:type="string">header links</argument>
+                    </arguments>
+                    <block class="Magento\Customer\Block\Account\Link" name="account.menu.my-account-link">
                         <arguments>
                             <argument name="label" xsi:type="string" translate="true">My Account</argument>
                             <argument name="sortOrder" xsi:type="number">110</argument>
                         </arguments>
                     </block>
-                    <block class="Magento\Wishlist\Block\Link" name="customer.menu.wish-list-link">
+                    <block class="Magento\Wishlist\Block\Link" name="account.menu.wish-list-link">
                         <arguments>
                             <argument name="sortOrder" xsi:type="number">60</argument>
                         </arguments>
                     </block>
-                    <block class="Magento\Customer\Block\Account\RegisterLink" name="customer.menu.register-link">
-                        <arguments>
-                            <argument name="label" xsi:type="string" translate="true">Create an Account</argument>
-                        </arguments>
-                    </block>
-                    <block class="Magento\Customer\Block\Account\SortLinkInterface" name="top.links.orders.link">
+                    <block class="Magento\Customer\Block\Account\SortLinkInterface" name="account.menu.orders.link">
                         <arguments>
                             <argument name="path" xsi:type="string">sales/order/history</argument>
                             <argument name="label" xsi:type="string" translate="true">My Orders</argument>
                             <argument name="sortOrder" xsi:type="number">10</argument>
                         </arguments>
                     </block>
-                    <block class="Magento\Customer\Block\Account\SortLinkInterface" name="top.links.adress.link">
+                    <block class="Magento\Customer\Block\Account\SortLinkInterface" name="account.menu.adress.link">
                         <arguments>
                             <argument name="path" xsi:type="string">customer/address</argument>
                             <argument name="label" xsi:type="string" translate="true">Address Book</argument>
@@ -45,7 +57,7 @@
                     </block>
                     <block
                         class="Magento\Customer\Block\Account\AuthorizationLink"
-                        name="customer.menu.authorization-link"
+                        name="account.menu.authorization.link"
                         template="Magento_Customer::account/link/authorization.phtml"
                     />
                 </block>

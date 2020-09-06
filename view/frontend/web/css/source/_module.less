@@ -1,7 +1,6 @@
-@customer-menu-position-right: -2px;
-@customer-menu-pointer-position-left-right: 10px;
-@customer-menu-icon-font-size: 28px;
-@customer-menu-icon-line-height: 28px;
+@account-menu-position-right: -2px;
+@account-menu-icon-font-size: 28px;
+@account-menu-icon-line-height: 28px;
 
 & when (@media-common = true) {
     .customer-menu-wrapper {
@@ -13,12 +12,12 @@
             @_dropdown-list-min-width: 150px,
             @_dropdown-list-item-padding: 3px,
             @_dropdown-list-item-hover: false,
-            @_dropdown-list-position-right: @customer-menu-position-right,
+            @_dropdown-list-position-right: @account-menu-position-right,
             @_dropdown-list-pointer-position: right,
-            @_dropdown-list-pointer-position-left-right: @customer-menu-pointer-position-left-right,
+            @_dropdown-list-pointer-position-left-right: 10px,
             @_icon-font-position: before,
-            @_icon-font-size: @customer-menu-icon-font-size,
-            @_icon-font-line-height: @customer-menu-icon-line-height,
+            @_icon-font-size: @account-menu-icon-font-size,
+            @_icon-font-line-height: @account-menu-icon-line-height,
             @_icon-font-color: @minicart-icons-color,
             @_icon-font-color-hover: @minicart-icons-color-hover,
             @_icon-font-color-active: @minicart-icons-color,
@@ -61,7 +60,7 @@
 
                 > a {
                     &:hover {
-                        background-color: fade(black, 10%);
+                        background-color: @color-gray91;
                         text-decoration: none;
                     }
                 }

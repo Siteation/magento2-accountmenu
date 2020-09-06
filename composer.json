@@ -1,8 +1,9 @@
 {
-  "name": "siteation/magento2-customer-menu",
-  "description": "",
-  "license": "proprietary",
+  "name": "siteation/magento2-account-menu",
+  "version": "1.0.0",
+  "license": "MIT",
   "type": "magento2-module",
+  "description": "Better account menu for Magento",
   "readme": "README.md",
   "keywords": [
     "magento2",
@@ -16,7 +17,8 @@
     }
   ],
   "require": {
-    "magento/module-customer": "102.0.*"
+    "magento/framework": "^102.0|^103.0",
+    "magento/module-customer": "^102.0"
   },
   "autoload": {
     "files": [
