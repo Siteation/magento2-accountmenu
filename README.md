@@ -42,10 +42,12 @@ This module also supports SCSS styles that can be used with tools like [Frontool
 
 Add `Siteation_AccountMenu` to the themes.json;
 
-```scss
+```json
 {
-    "modules": {
-        "Siteation_AccountMenu": "vendor/siteation/magento2-account-menu/view/frontend"
+    "<THEME>": {
+        "modules": {
+            "Siteation_AccountMenu": "vendor/siteation/magento2-account-menu/view/frontend"
+        }
     }
 }
 ```
