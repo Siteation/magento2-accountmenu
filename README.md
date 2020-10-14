@@ -40,7 +40,16 @@ To load the Blank theme styles instead of Luma.
 
 This module also supports SCSS styles that can be used with tools like [Frontools](https://github.com/SnowdogApps/magento2-frontools).
 
-Copy the `styles/_module.scss` to your theme.
+Add `Siteation_AccountMenu` to the themes.json;
+
+```scss
+{
+    "modules": {
+        "Siteation_AccountMenu": "vendor/siteation/magento2-account-menu/view/frontend"
+    }
+}
+```
+
 And import it in your `styles.scss` via;
 
 ```scss
