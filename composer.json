@@ -1,5 +1,5 @@
 {
-  "name": "siteation/magento2-account-menu",
+  "name": "siteation/magento2-module-account-menu",
   "version": "1.0.0",
   "license": "MIT",
   "type": "magento2-module",
@@ -25,7 +25,7 @@
       "registration.php"
     ],
     "psr-4": {
-      "Siteation\\CustomerMenu\\": ""
+      "Siteation\\AccountMenu\\": ""
     }
   }
 }
