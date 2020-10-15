@@ -48,7 +48,7 @@ Add `Siteation_AccountMenu` to the themes.json;
 {
     "<THEME>": {
         "modules": {
-            "Siteation_AccountMenu": "vendor/siteation/magento2-account-menu/view/frontend"
+            "Siteation_AccountMenu": "vendor/siteation/magento2-module-account-menu/view/frontend"
         }
     }
 }
