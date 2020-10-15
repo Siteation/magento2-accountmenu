@@ -1,8 +1,8 @@
-$account-menu-toggle-selector: ".action.show-account-menu";
-$account-menu-option-selector: ".header.links";
-$account-menu-position-right: 0;
-$account-menu-icon-font-size: 33px;
-$account-menu-icon-line-height: 33px;
+$account-menu-toggle-selector: ".action.show-account-menu" !default;
+$account-menu-option-selector: ".header.links" !default;
+$account-menu-position-right: 0 !default;
+$account-menu-icon-font-size: 33px !default;
+$account-menu-icon-line-height: 33px !default;
 
 .account-menu-wrapper {
     @include lib-dropdown(
