@@ -2,6 +2,9 @@
 
 [![Packagist Version](https://img.shields.io/packagist/v/siteation/magento2-module-account-menu)](https://packagist.org/packages/siteation/magento2-module-account-menu)
 
+> **Warning** We stopped supporting Luma,
+> this module will no long recive any updates
+
 This module adds an account menu next to the minicart.
 So that you can access account menu more easily.
 
